@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --main-color: #1F4590;
+    --second-color: #FFA451;
+    --body-color: #D0FCFF;
+
+    --main-font: 'Open Sans', sans-serif;
+    --heading-font: 'Raleway', sans-serif;
+}
+
+body{
+    background-color: var(--body-color);
+    font-family: var(--main-font);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+section{
+    margin-top: 200px;
+}
+
+.container{
+    max-width: 1500px;
+}
+
+.navbar .nav-wrapper{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+.navbar .menu-toggle{
+    display: none;
+}
+.nav-wrapper .logo{
+    font-size: 2.8rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--main-color)
+}
+
+.nav-wrapper .logo span{
+    font-size: 1.8rem;
+    color: var(--second-color)
+}
+
+.nav-wrapper .menu-wrapper{
+    display: flex;
+    gap: 50px;
+}
+
+.nav-wrapper .menu-wrapper .menu{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.menu-wrapper .menu .menu-link{
+    font-size: 1.25rem;
+    color: var(--main-color);
+    font-family: var(--heading-font);
+    font-weight; 500;
+}
+
+.menu-wrapper .menu .menu-link.active{
+    color: var(--second-color);
+    font-weight; 700;
+}
+
+.menu-wrapper .btn-member{
+    font-family: var(--heading-font);
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--second-color);
+    padding: 25px 30px;
+    border-radius: 50px;
+}
+
+/* Home Start */
+.home{
+    margin-top: 110px;
+}
+
+.home .home-wrapper{
+    margin: auto;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.home-wrapper .heading{
+    font-size: 3.4rem;
+    font-family: var(--heading-font); 
+    color: var(--main-color);
+    font-weight: 700; 
+}
+.home-wrapper .heading span{
+    font-size: 2.9rem;
+    color: var(--second-color);
+}
+.home-wrapper .subheading{
+    font-size: 1.125rem;
+    font-weight: 300; 
+    color: #4a4a4a;
+    max-width: 500px;
+    margin: 25px 0;
+}
+
+.home-wrapper .box-wrapper{
+    display: flex;
+    gap: 80px;
+}
+.home-wrapper .box-wrapper .box{
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.box-wrapper .box i{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.box-wrapper .box p{
+    font-size: 1.125rem;
+    font-family: var(--heading-font);
+    color: #535353;
+    font-weight: 700;
+}
+
+.content-left .form-panel{
+    position: relative;
+    width: 650px;
+    height: 120px;
+    border-radius: 70px;
+    margin-top: 50px;
+    border: 3px solid #fff;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* overflow: hidden; */
+}
+
+.form-panel img{
+    position: absolute;
+    object-fit: cover;
+    top: 54%; /* Posisikan gambar di tengah vertikal */
+    left: 50%; /* Posisikan gambar di tengah horizontal */
+    transform: translate(-50%, -50%);
+}
+
+.form-panel .title-form{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--main-color);
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+
+.form-panel .form-location, .form-date{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.form-panel .form-location .loc .form-date .cal{
+    font-size: 1.6rem;
+    color: var(--main-color)
+}
+
+.form-location select{
+    border: none;
+    appearance: none; /* untuk menghilangkan tanda panah dropdown */
+    padding: 5px 10px;
+    border-radius: 5px
+
+}
+.form-date input{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+.form-date input::-webkit-inner-spin-button,
+.form-date input::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: 100%;
+    left: -25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.form-panel .btn-search{
+    position: relative;
+    background-color: var(--second-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: #fff;
+}
+.form-panel .btn-search i{
+    font-size: 1.4rem;
+}
+.content-left .sugestion{
+    font-size: 15px;
+    margin-top: 20px;
+    color: #ABABAB;
+    display: flex;
+    justify-content: center;
+}
+
+.home-wrapper .content-left{
+    flex: 0 0 50%;
+}
+.home-wrapper .content-right{
+    flex: 0 0 50%;
+}
+
+.content-right .img-wrapper{
+    max-width: 800px;
+}
+.content-right .img-wrapper img{
+    width: 100%;
+}
+/* Home End */
+
+@media screen and (max-width: 991px){
+    .navbar .nav-wrapper{
+        padding:0 30px;
+    }
+    .nav-wrapper .menu-wrapper .menu {
+        gap: 50px;
+    }
+    .menu-wrapper .menu .menu-link{
+        font-size: 1rem;
+    }
+    .menu-wrapper .btn-member{
+        padding: 20px 25px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .nav-wrapper .menu-wrapper{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        display: block;
+        text-align: center;
+        padding-bottom: 3rem;
+        border-radius: 10px;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        transition: .5s ease-in-out;
+        background-color: var(--main-color);
+    }
+    .nav-wrapper .menu-wrapper.active{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+        transition: .5s ease-in-out;
+    }
+    .menu-toggle.bx-x{
+        transform: rotate(360deg);
+        transition: .5s;
+    }
+    .nav-wrapper .menu-wrapper .menu{
+        display: block;
+    }
+    .menu-wrapper .menu .menu-item{
+        margin: 30px 0;
+    }
+    .menu .menu-item .menu-link{
+        color: #fff;
+    }
+    .navbar .menu-toggle{
+        display: initial;
+        font-size: 2.5rem;
+        color: var(--main-color);
+        transition: .5s;
+    }
+}
